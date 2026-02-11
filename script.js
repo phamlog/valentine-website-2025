@@ -226,27 +226,30 @@ function setupMusicPlayer() {
     const musicControls = document.getElementById('musicControls');
     const musicToggle = document.getElementById('musicToggle');
     const bgMusic = document.getElementById('bgMusic');
-    const musicSource = document.getElementById('musicSource');
 
     if (!config.music.enabled) {
         musicControls.style.display = 'none';
         return;
     }
 
-    musicSource.src = config.music.musicUrl;
+    // 🔥 Set trực tiếp src (bỏ <source>)
+    bgMusic.src = config.music.musicUrl;
     bgMusic.volume = config.music.volume || 1;
-    bgMusic.load();
+    bgMusic.loop = true;
 
-    // Không autoplay khi load nữa
     musicToggle.textContent = config.music.startText;
 
     musicToggle.addEventListener('click', () => {
         if (bgMusic.paused) {
-            bgMusic.play();
-            musicToggle.textContent = config.music.stopText;
+            bgMusic.play().then(() => {
+                musicToggle.textContent = config.music.stopText;
+            }).catch(err => {
+                console.log("Play error:", err);
+            });
         } else {
             bgMusic.pause();
             musicToggle.textContent = config.music.startText;
         }
     });
 }
+
