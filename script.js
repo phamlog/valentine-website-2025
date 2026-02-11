@@ -178,15 +178,35 @@ function celebrate() {
     document.querySelectorAll('.question-section').forEach(q => q.classList.add('hidden'));
     const celebration = document.getElementById('celebration');
     celebration.classList.remove('hidden');
-    
-    // Set celebration messages
+
+    // Set title
     document.getElementById('celebrationTitle').textContent = config.celebration.title;
-    document.getElementById('celebrationMessage').textContent = config.celebration.message;
+
+    // ✅ Dùng innerHTML để render ảnh
+    const messageEl = document.getElementById('celebrationMessage');
+    messageEl.innerHTML = config.celebration.message;
+
+    // Fade in effect
+    messageEl.style.opacity = "0";
+    messageEl.style.transform = "scale(0.8)";
+    messageEl.style.transition = "all 0.6s ease";
+
+    setTimeout(() => {
+        messageEl.style.opacity = "1";
+        messageEl.style.transform = "scale(1)";
+    }, 100);
+
     document.getElementById('celebrationEmojis').textContent = config.celebration.emojis;
-    
-    // Create heart explosion effect
+
     createHeartExplosion();
+
+    // ✅ Tự bật nhạc khi bấm Yes
+    const bgMusic = document.getElementById('bgMusic');
+    if (config.music.enabled) {
+        bgMusic.play().catch(() => {});
+    }
 }
+
 
 // Create heart explosion animation
 function createHeartExplosion() {
