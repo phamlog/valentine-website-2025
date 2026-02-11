@@ -49,10 +49,22 @@ const CONFIG = {
 
     // Messages that appear after they say "Yes!"
     celebration: {
-        title: "Vợ iu là người xinh nhất đẹp nhất thế giới này 🎉💝💖💝💓",
-        message: '<img src="./anh.jpg" style="width:300px;border-radius:20px;margin-top:20px;">',
-        emojis: "🎁💖🤗💝💋❤️💕"  // These will bounce around
-    },
+    title: "Vợ iu là người xinh nhất đẹp nhất thế giới này 🎉💝💖💝💓",
+    message: `
+        <img src="./anh.jpg" 
+             style="
+             width:300px;
+             border-radius:20px;
+             margin-top:20px;
+             box-shadow:0 15px 35px rgba(0,0,0,0.2);
+             transition: transform 0.3s ease;
+             "
+             onmouseover="this.style.transform='scale(1.05)'"
+             onmouseout="this.style.transform='scale(1)'"
+        >
+    `,
+    emojis: "🎁💖🤗💝💋❤️💕"
+},
 
     // Color scheme for the website
     // Use https://colorhunt.co or https://coolors.co to find beautiful color combinations
