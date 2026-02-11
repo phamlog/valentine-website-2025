@@ -50,7 +50,7 @@ const CONFIG = {
     // Messages that appear after they say "Yes!"
     celebration: {
         title: "Vợ iu là người xinh nhất đẹp nhất thế giới này 🎉💝💖💝💓",
-        message: "./anh.jpg",
+        message: '<img src="./anh.jpg" style="width:300px;border-radius:20px;margin-top:20px;">',
         emojis: "🎁💖🤗💝💋❤️💕"  // These will bounce around
     },
 
