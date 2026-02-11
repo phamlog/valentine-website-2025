@@ -22,10 +22,10 @@ const CONFIG = {
     // Customize each question and its possible responses
     questions: {
         first: {
-            text: "Ngân có biết anh siuuuuu siuuuu iu em khummmm",                                    // First interaction
+            text: "Ngân có biết anh siuuuuu siuuuu iu em khum",                                    // First interaction
             yesBtn: "Cóooooo",                                             // Text for "Yes" button
-            noBtn: "Khummm",                                               // Text for "No" button
-            secretAnswer: "Anh hong thích emm, anh iuuuu emmmm ❤️"           // Secret hover message
+            noBtn: "Khum",                                               // Text for "No" button
+            secretAnswer: "Anh hong thích em, anh iuuuu em ❤️"           // Secret hover message
         },
         second: {
             text: "Anh có iu em nhìu khum nhỉ??",                          // For the love meter
@@ -42,15 +42,15 @@ const CONFIG = {
     // Love meter messages
     // They show up depending on how far they slide the meter
     loveMessages: {
-        extreme: "Em iu anh nhìu đến thế nào á??? 🥰🚀💝",  // Shows when they go past 5000%
+        extreme: "Anh mún cưới em 🥰🚀💝",  // Shows when they go past 5000%
         high: "Hơn cả vũ trụ lunnn 🚀💝",              // Shows when they go past 1000%
-        normal: "Hơn cả thiên hà 🥰"                           // Shows when they go past 100%
+        normal: "Anh iu em 1 tí🥰"                           // Shows when they go past 100%
     },
 
     // Messages that appear after they say "Yes!"
     celebration: {
         title: "Vợ iu là người xinh nhất đẹp nhất thế giới này 🎉💝💖💝💓",
-        message: "Đây là phần thưởng giành cho em, đến đây anh ôm hun em nè",
+        message: "./anh.jpg",
         emojis: "🎁💖🤗💝💋❤️💕"  // These will bounce around
     },
 
