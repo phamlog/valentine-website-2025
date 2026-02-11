@@ -202,9 +202,10 @@ function celebrate() {
 
     // ✅ Tự bật nhạc khi bấm Yes
     const bgMusic = document.getElementById('bgMusic');
-    if (config.music.enabled) {
-        bgMusic.play().catch(() => {});
-    }
+if (config.music.enabled && bgMusic.paused) {
+    bgMusic.play().catch(err => console.log("Autoplay blocked:", err));
+}
+
 }
 
 
